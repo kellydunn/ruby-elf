@@ -222,7 +222,7 @@ module Elf
         seek(@phoff)
         for i in 1..@phnum
           phdata = {}
-          phdata[:idx] = i -1
+          phdata[:idx] = i - 1
           phdata[:type_id] = read_word
           phdata[:offset] = read_off
           phdata[:virtual_address] = read_addr
@@ -235,7 +235,6 @@ module Elf
           @program_headers_data << phdata
           @program_headers[phdata[:idx]] = ProgramHeader.new(phdata)
         end
-
 
         @sections_data = []
         seek(@shoff)
