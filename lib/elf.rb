@@ -30,7 +30,7 @@ require 'elf/section'
 require 'elf/program_header'
 
 module Elf
-  VERSION = "1.0.6.1"
+  VERSION = "1.0.8"
 
   MagicString = "\177ELF"
 
